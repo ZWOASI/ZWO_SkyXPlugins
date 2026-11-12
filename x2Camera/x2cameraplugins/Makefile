@@ -10,7 +10,7 @@ ifeq ($(FakeUSB), n)
 	#	install_name_tool -change /usr/local/lib/libusb-1.0.0.dylib @loader_path/libusb-1.0.0.dylib x2cameraASI.dylib
 		install_name_tool -change /usr/local/lib/libusb-1.0.0.dylib "@executable_path/../Frameworks/libusb-1.0.0.dylib" x2cameraASI.dylib
 		#cp ../../../linux/libusb/$(platform)/libusb-1.0.0.dylib lib/$(platform)
-		cp ../../../linux/libusb/$(platform)/libusb-1.0.0-1.0.23.dylib lib/$(platform)/libusb-1.0.0.dylib
+		cp ../../../linux/libusb/mac64/libusb-1.0.0.dylib lib/mac64/libusb-1.0.0.dylib
 endif
 	mv -f x2cameraASI.dylib lib/$(platform)
 endif
